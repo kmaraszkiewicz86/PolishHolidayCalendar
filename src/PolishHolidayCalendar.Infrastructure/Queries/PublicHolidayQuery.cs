@@ -1,7 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using PolishHolidayCalendar.Domain.Entities;
 using PolishHolidayCalendar.Domain.Interfaces;
-using PolishHolidayCalendar.Infrastructure.Data;
+using PolishHolidayCalendar.Infrastructure.Database;
 
 namespace PolishHolidayCalendar.Infrastructure.Queries;
 
@@ -30,9 +30,8 @@ public class PublicHolidayQuery : IPublicHolidayQuery
 
     public async Task<PublicHoliday?> GetByIdAsync(int id)
     {
-        // Admin queries should use LINQ
         return await _context.PublicHolidays
-            .Where(h => h.Id == id)
+            .FromSqlRaw("SELECT * FROM PublicHolidays WHERE Id = {0}", id)
             .FirstOrDefaultAsync();
     }
 }

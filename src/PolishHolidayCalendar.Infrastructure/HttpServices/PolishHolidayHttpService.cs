@@ -2,13 +2,13 @@ using System.Text.Json;
 using PolishHolidayCalendar.Domain.Entities;
 using PolishHolidayCalendar.Domain.Interfaces;
 
-namespace PolishHolidayCalendar.Infrastructure.Services;
+namespace PolishHolidayCalendar.Infrastructure.HttpServices;
 
-public class HttpService : IHttpService
+public class PolishHolidayHttpService : IHttpService
 {
     private readonly HttpClient _httpClient;
 
-    public HttpService(HttpClient httpClient)
+    public PolishHolidayHttpService(HttpClient httpClient)
     {
         _httpClient = httpClient;
     }

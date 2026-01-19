@@ -1,10 +1,10 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using PolishHolidayCalendar.Domain.Interfaces;
-using PolishHolidayCalendar.Infrastructure.Services;
+using PolishHolidayCalendar.Infrastructure.HttpServices;
 
 // Setup Dependency Injection
 var serviceProvider = new ServiceCollection()
-    .AddHttpClient<IHttpService, HttpService>()
+    .AddHttpClient<IHttpService, PolishHolidayHttpService>()
     .Services
     .BuildServiceProvider();
 

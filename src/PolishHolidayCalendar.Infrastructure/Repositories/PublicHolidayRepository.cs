@@ -1,7 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using PolishHolidayCalendar.Domain.Entities;
 using PolishHolidayCalendar.Domain.Interfaces;
-using PolishHolidayCalendar.Infrastructure.Data;
+using PolishHolidayCalendar.Infrastructure.Database;
 
 namespace PolishHolidayCalendar.Infrastructure.Repositories;
 
@@ -14,7 +14,7 @@ public class PublicHolidayRepository : IPublicHolidayRepository
         _context = context;
     }
 
-    public async Task SaveAsync(IEnumerable<PublicHoliday> holidays)
+    public void Save(IEnumerable<PublicHoliday> holidays)
     {
         var holidayList = holidays.ToList();
         
@@ -22,9 +22,9 @@ public class PublicHolidayRepository : IPublicHolidayRepository
         var dates = holidayList.Select(h => h.Date).ToList();
         var countryCodes = holidayList.Select(h => h.CountryCode).Distinct().ToList();
         
-        var existingHolidays = await _context.PublicHolidays
+        var existingHolidays = _context.PublicHolidays
             .Where(h => dates.Contains(h.Date) && countryCodes.Contains(h.CountryCode))
-            .ToListAsync();
+            .ToList();
         
         var existingHolidaysDict = existingHolidays
             .ToDictionary(h => (h.Date, h.CountryCode));
@@ -49,7 +49,5 @@ public class PublicHolidayRepository : IPublicHolidayRepository
                 _context.PublicHolidays.Update(existingHoliday);
             }
         }
-
-        await _context.SaveChangesAsync();
     }
 }
