@@ -1,10 +1,9 @@
 using System.Text.Json;
 using PolishHolidayCalendar.Domain.Entities;
-using PolishHolidayCalendar.Domain.Interfaces;
 
 namespace PolishHolidayCalendar.Infrastructure.HttpServices;
 
-public class PolishHolidayHttpService : IHttpService
+public class PolishHolidayHttpService : IPolishHolidayHttpService
 {
     private readonly HttpClient _httpClient;
 

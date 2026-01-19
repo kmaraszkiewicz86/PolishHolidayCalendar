@@ -1,6 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using PolishHolidayCalendar.Domain.Entities;
-using PolishHolidayCalendar.Domain.Interfaces;
+using PolishHolidayCalendar.Domain.Queries;
 using PolishHolidayCalendar.Infrastructure.Database;
 
 namespace PolishHolidayCalendar.Infrastructure.Queries;

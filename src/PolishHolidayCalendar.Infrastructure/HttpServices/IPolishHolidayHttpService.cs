@@ -1,8 +1,8 @@
 using PolishHolidayCalendar.Domain.Entities;
 
-namespace PolishHolidayCalendar.Domain.Interfaces;
+namespace PolishHolidayCalendar.Infrastructure.HttpServices;
 
-public interface IHttpService
+public interface IPolishHolidayHttpService
 {
     Task<IEnumerable<PublicHoliday>> GetPublicHolidaysAsync(int year, string countryCode);
 }

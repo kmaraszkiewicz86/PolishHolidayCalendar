@@ -1,15 +1,14 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
-using PolishHolidayCalendar.Domain.Interfaces;
 using PolishHolidayCalendar.Infrastructure.HttpServices;
 
 // Setup Dependency Injection
 var serviceProvider = new ServiceCollection()
-    .AddHttpClient<IHttpService, PolishHolidayHttpService>()
+    .AddHttpClient<IPolishHolidayHttpService, PolishHolidayHttpService>()
     .Services
     .BuildServiceProvider();
 
 // Get the service and fetch holidays
-var httpService = serviceProvider.GetRequiredService<IHttpService>();
+var httpService = serviceProvider.GetRequiredService<IPolishHolidayHttpService>();
 
 Console.WriteLine("Fetching Polish public holidays for 2026...");
 Console.WriteLine();

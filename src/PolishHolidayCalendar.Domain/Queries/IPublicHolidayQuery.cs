@@ -1,6 +1,6 @@
 using PolishHolidayCalendar.Domain.Entities;
 
-namespace PolishHolidayCalendar.Domain.Interfaces;
+namespace PolishHolidayCalendar.Domain.Queries;
 
 public interface IPublicHolidayQuery
 {

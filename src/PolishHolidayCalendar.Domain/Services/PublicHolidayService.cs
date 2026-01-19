@@ -1,5 +1,4 @@
 using PolishHolidayCalendar.Domain.Entities;
-using PolishHolidayCalendar.Domain.Interfaces;
 using PolishHolidayCalendar.Domain.Repositories;
 
 namespace PolishHolidayCalendar.Domain.Services;
