@@ -10,4 +10,10 @@
     <PackageReference Include="Kmaraszkiewicz86.SimpleCqrs" Version="0.1.4" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\PolishHolidayCalendar.Domain\PolishHolidayCalendar.Domain.csproj" />
+    <ProjectReference Include="..\PolishHolidayCalendar.Model\PolishHolidayCalendar.Model.csproj" />
+    <ProjectReference Include="..\PolishHolidayCalendar.Infrastructure\PolishHolidayCalendar.Infrastructure.csproj" />
+  </ItemGroup>
+
 </Project>
