@@ -4,5 +4,5 @@ namespace PolishHolidayCalendar.Domain.Interfaces;
 
 public interface IPublicHolidayRepository
 {
-    void Save(IEnumerable<PublicHoliday> holidays);
+    Task SaveAsync(IEnumerable<PublicHoliday> holidays);
 }

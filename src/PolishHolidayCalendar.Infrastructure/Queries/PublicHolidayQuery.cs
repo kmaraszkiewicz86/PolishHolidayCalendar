@@ -24,14 +24,14 @@ public class PublicHolidayQuery : IPublicHolidayQuery
     public async Task<IEnumerable<PublicHoliday>> GetByYearAsync(int year)
     {
         return await _context.PublicHolidays
-            .FromSqlRaw("SELECT * FROM PublicHolidays WHERE YEAR(Date) = {0}", year)
+            .FromSqlInterpolated($"SELECT * FROM PublicHolidays WHERE YEAR(Date) = {year}")
             .ToListAsync();
     }
 
     public async Task<PublicHoliday?> GetByIdAsync(int id)
     {
         return await _context.PublicHolidays
-            .FromSqlRaw("SELECT * FROM PublicHolidays WHERE Id = {0}", id)
+            .FromSqlInterpolated($"SELECT * FROM PublicHolidays WHERE Id = {id}")
             .FirstOrDefaultAsync();
     }
 }

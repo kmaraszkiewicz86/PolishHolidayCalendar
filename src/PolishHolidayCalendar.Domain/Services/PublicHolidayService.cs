@@ -17,7 +17,7 @@ public class PublicHolidayService
 
     public async Task SaveHolidaysAsync(IEnumerable<PublicHoliday> holidays)
     {
-        _repository.Save(holidays);
+        await _repository.SaveAsync(holidays);
         await _unitOfWork.SaveChangesAsync();
     }
 }

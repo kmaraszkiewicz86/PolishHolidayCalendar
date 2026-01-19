@@ -14,7 +14,7 @@ public class PublicHolidayRepository : IPublicHolidayRepository
         _context = context;
     }
 
-    public void Save(IEnumerable<PublicHoliday> holidays)
+    public async Task SaveAsync(IEnumerable<PublicHoliday> holidays)
     {
         var holidayList = holidays.ToList();
         
@@ -22,9 +22,9 @@ public class PublicHolidayRepository : IPublicHolidayRepository
         var dates = holidayList.Select(h => h.Date).ToList();
         var countryCodes = holidayList.Select(h => h.CountryCode).Distinct().ToList();
         
-        var existingHolidays = _context.PublicHolidays
+        var existingHolidays = await _context.PublicHolidays
             .Where(h => dates.Contains(h.Date) && countryCodes.Contains(h.CountryCode))
-            .ToList();
+            .ToListAsync();
         
         var existingHolidaysDict = existingHolidays
             .ToDictionary(h => (h.Date, h.CountryCode));
