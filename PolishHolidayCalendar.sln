@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.0.31903.59
+# Visual Studio Version 18
+VisualStudioVersion = 18.2.11408.102 d18.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{827E0CD3-B72D-47B6-A68D-7590B98EB39B}"
 EndProject
@@ -11,7 +11,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PolishHolidayCalendar.Infra
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PolishHolidayCalendar.Application", "src\PolishHolidayCalendar.Application\PolishHolidayCalendar.Application.csproj", "{2E816CCB-E55C-4EF6-ADB0-56CC2A8F4598}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PolishHolidayCalendar.ConsoleApp", "src\PolishHolidayCalendar.ConsoleApp\PolishHolidayCalendar.ConsoleApp.csproj", "{9C85FEFD-2205-449D-B7E6-1BCABD4942EE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PolishHolidayCalendar.Presentation", "src\PolishHolidayCalendar.Presentation\PolishHolidayCalendar.Presentation.csproj", "{B37CD61E-637A-B28D-BA8E-7DFEE6390716}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PolishHolidayCalendar.UI", "src\PolishHolidayCalendar.UI\PolishHolidayCalendar.UI.csproj", "{584F898D-736C-DAA9-77C0-E3BE8344553E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -59,18 +61,30 @@ Global
 		{2E816CCB-E55C-4EF6-ADB0-56CC2A8F4598}.Release|x64.Build.0 = Release|Any CPU
 		{2E816CCB-E55C-4EF6-ADB0-56CC2A8F4598}.Release|x86.ActiveCfg = Release|Any CPU
 		{2E816CCB-E55C-4EF6-ADB0-56CC2A8F4598}.Release|x86.Build.0 = Release|Any CPU
-		{9C85FEFD-2205-449D-B7E6-1BCABD4942EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9C85FEFD-2205-449D-B7E6-1BCABD4942EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9C85FEFD-2205-449D-B7E6-1BCABD4942EE}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{9C85FEFD-2205-449D-B7E6-1BCABD4942EE}.Debug|x64.Build.0 = Debug|Any CPU
-		{9C85FEFD-2205-449D-B7E6-1BCABD4942EE}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{9C85FEFD-2205-449D-B7E6-1BCABD4942EE}.Debug|x86.Build.0 = Debug|Any CPU
-		{9C85FEFD-2205-449D-B7E6-1BCABD4942EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9C85FEFD-2205-449D-B7E6-1BCABD4942EE}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9C85FEFD-2205-449D-B7E6-1BCABD4942EE}.Release|x64.ActiveCfg = Release|Any CPU
-		{9C85FEFD-2205-449D-B7E6-1BCABD4942EE}.Release|x64.Build.0 = Release|Any CPU
-		{9C85FEFD-2205-449D-B7E6-1BCABD4942EE}.Release|x86.ActiveCfg = Release|Any CPU
-		{9C85FEFD-2205-449D-B7E6-1BCABD4942EE}.Release|x86.Build.0 = Release|Any CPU
+		{B37CD61E-637A-B28D-BA8E-7DFEE6390716}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B37CD61E-637A-B28D-BA8E-7DFEE6390716}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B37CD61E-637A-B28D-BA8E-7DFEE6390716}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{B37CD61E-637A-B28D-BA8E-7DFEE6390716}.Debug|x64.Build.0 = Debug|Any CPU
+		{B37CD61E-637A-B28D-BA8E-7DFEE6390716}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{B37CD61E-637A-B28D-BA8E-7DFEE6390716}.Debug|x86.Build.0 = Debug|Any CPU
+		{B37CD61E-637A-B28D-BA8E-7DFEE6390716}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B37CD61E-637A-B28D-BA8E-7DFEE6390716}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B37CD61E-637A-B28D-BA8E-7DFEE6390716}.Release|x64.ActiveCfg = Release|Any CPU
+		{B37CD61E-637A-B28D-BA8E-7DFEE6390716}.Release|x64.Build.0 = Release|Any CPU
+		{B37CD61E-637A-B28D-BA8E-7DFEE6390716}.Release|x86.ActiveCfg = Release|Any CPU
+		{B37CD61E-637A-B28D-BA8E-7DFEE6390716}.Release|x86.Build.0 = Release|Any CPU
+		{584F898D-736C-DAA9-77C0-E3BE8344553E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{584F898D-736C-DAA9-77C0-E3BE8344553E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{584F898D-736C-DAA9-77C0-E3BE8344553E}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{584F898D-736C-DAA9-77C0-E3BE8344553E}.Debug|x64.Build.0 = Debug|Any CPU
+		{584F898D-736C-DAA9-77C0-E3BE8344553E}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{584F898D-736C-DAA9-77C0-E3BE8344553E}.Debug|x86.Build.0 = Debug|Any CPU
+		{584F898D-736C-DAA9-77C0-E3BE8344553E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{584F898D-736C-DAA9-77C0-E3BE8344553E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{584F898D-736C-DAA9-77C0-E3BE8344553E}.Release|x64.ActiveCfg = Release|Any CPU
+		{584F898D-736C-DAA9-77C0-E3BE8344553E}.Release|x64.Build.0 = Release|Any CPU
+		{584F898D-736C-DAA9-77C0-E3BE8344553E}.Release|x86.ActiveCfg = Release|Any CPU
+		{584F898D-736C-DAA9-77C0-E3BE8344553E}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -79,6 +93,10 @@ Global
 		{55F69C65-1262-4E55-A22B-CBDACDCA18EE} = {827E0CD3-B72D-47B6-A68D-7590B98EB39B}
 		{E8F42107-9DA4-4549-B5FA-EAA21B7871F1} = {827E0CD3-B72D-47B6-A68D-7590B98EB39B}
 		{2E816CCB-E55C-4EF6-ADB0-56CC2A8F4598} = {827E0CD3-B72D-47B6-A68D-7590B98EB39B}
-		{9C85FEFD-2205-449D-B7E6-1BCABD4942EE} = {827E0CD3-B72D-47B6-A68D-7590B98EB39B}
+		{B37CD61E-637A-B28D-BA8E-7DFEE6390716} = {827E0CD3-B72D-47B6-A68D-7590B98EB39B}
+		{584F898D-736C-DAA9-77C0-E3BE8344553E} = {827E0CD3-B72D-47B6-A68D-7590B98EB39B}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {259AB2A6-DA80-4EE1-A836-414744EB75E7}
 	EndGlobalSection
 EndGlobal
