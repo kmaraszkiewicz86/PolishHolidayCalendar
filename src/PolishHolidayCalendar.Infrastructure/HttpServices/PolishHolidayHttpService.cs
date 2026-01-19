@@ -21,11 +21,20 @@ public class PolishHolidayHttpService : IHttpService
         response.EnsureSuccessStatusCode();
         
         var json = await response.Content.ReadAsStringAsync();
-        var holidays = JsonSerializer.Deserialize<List<PublicHoliday>>(json, new JsonSerializerOptions
-        {
-            PropertyNameCaseInsensitive = true
-        });
         
-        return holidays ?? new List<PublicHoliday>();
+        try
+        {
+            var holidays = JsonSerializer.Deserialize<List<PublicHoliday>>(json, new JsonSerializerOptions
+            {
+                PropertyNameCaseInsensitive = true
+            });
+            
+            return holidays ?? new List<PublicHoliday>();
+        }
+        catch (JsonException ex)
+        {
+            throw new InvalidOperationException(
+                $"Failed to deserialize public holidays response from {url}. Response: {json}", ex);
+        }
     }
 }

@@ -17,7 +17,7 @@ public class PublicHolidayQuery : IPublicHolidayQuery
     public async Task<IEnumerable<PublicHoliday>> GetAllAsync()
     {
         return await _context.PublicHolidays
-            .FromSqlRaw("SELECT * FROM PublicHolidays")
+            .FromSqlInterpolated($"SELECT * FROM PublicHolidays")
             .ToListAsync();
     }
 
